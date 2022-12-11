@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping</title>
+  <link rel="stylesheet" href="index.css">
+  
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+
+<body>
+    
+  
+    <nav>
+      <div class="nav-container">
+        <a href="เว็บขายของ.html">
+          <img src="./imgs/AE3990CD-BC69-49D8-BF9E-00CE583C3D68.jpg" class="logonav">
+        </a>
+  
+        <div class="nav-profile">
+          <p class="nav-profile-name">G6</p>
+          <div onclick="openCart()" style="cursor: pointer;" class="nav-profile-cart">
+            <i class="fas fa-cart-shopping"></i>
+            <div id="cartcount" class="cartcount" style="display: none;" >
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="container">
+      <div class="sidebar">
+        <input onkeyup="searchsomething(this)" id="txt_search" type="text" class="sidebar-search" placeholder="Search something...">
+
+        <a onclick="searchproduct('all')" class="sidebar-items">
+            All product
+        </a>
+  
+        <a onclick="searchproduct('PILOT')" class="sidebar-items">
+          PILOT
+        </a>
+        <a onclick="searchproduct('Faber-Castell')" class="sidebar-items">
+          Faber-Castell
+        </a>
+        <a onclick="searchproduct('Uni')" class="sidebar-items">
+          Uni
+        </a>
+        
+      </div>
+      <div id="productlist" class="product">
+
+          
+        
+      </div>
+    </div>
+  
+    <div id="modalDesc" class="modal" style="display: none;" >
+      <div onclick="closeModal()" class="modal-bg"></div>
+      <div class="modal-page">
+        <h2>Detail</h2>
+        <br>
+        <div class="modaldesc-content">
+          <img id="mdd-img" class="modaldesc-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+          <div class="modaldesc-detail">
+            <p id="mdd-name" style="font-size: 1.5vw;">Product name</p>
+            <p id="mdd-price" style="font-size: 1.2vw;">500 THB</p>
+            <br>
+            <p id="mdd-desc" style="color: #adadad;">Lorem iaudantium harum doloremque alias. Quae, vel ipsum quasi, voluptas, sit optio nemo magni numquam non dicta voluptates porro! Vero eveniet numquam sit aut vel eligendi officiis iste tenetur expedita. Delectus vero quibusdam adipisci in. Esse.</p>
+            <br>
+            <div class="btn-control">
+              <button onclick="closeModal()" class="btn">
+                Close
+              </button>
+              <button onclick="addtocart()" class="btn btn-buy">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="modalCart" class="modal" style="display: none;">
+      <div onclick="closeModal()" class="modal-bg"></div>
+      <div class="modal-page">
+        <h2>My cart</h2>
+        <br>
+        <div id="mycart" class="cartlist">
+
+            
+          
+          
+          
+  
+        </div>
+        <div class="btn-control">
+          <button onclick="closeModal()" class="btn">
+            Cancel
+          </button>
+          <button onclick="pdfdowload()" class="btn btn-buy">
+            Buy
+          </button>
+        </div>
+      </div>
+    </div>
+  
+</body>
+</html>
